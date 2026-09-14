@@ -1,0 +1,109 @@
+:root {
+    color-scheme: light;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #2e75ae;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    min-width: 320px;
+}
+
+.Main-meat {
+    min-height: 100vh;
+    margin: 0;
+    padding: clamp(1rem, 4vw, 3rem);
+    background: linear-gradient(135deg, #2e75ae 0%, #4b9bba 100%);
+    color: #102d45;
+    text-align: center;
+}
+
+.page-content {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+}
+
+.name,
+.what-we-do {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto clamp(1.5rem, 5vw, 3rem);
+    border-left: 3px dotted lightgreen;
+    border-bottom: 3px solid lightgreen;
+    box-shadow: -3px 3px darkblue;
+    overflow-wrap: anywhere;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    padding: 1rem;
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+.logo {
+    flex: 0 0 auto;
+    width: clamp(3.5rem, 12vw, 6rem);
+    height: clamp(3.5rem, 12vw, 6rem);
+    object-fit: contain;
+}
+
+.what-we-do {
+    padding: 0.65rem 1rem;
+    font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+.telling-what-we-do {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: clamp(1rem, 2.2vw, 1.35rem);
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -5px 5px lightgreen;
+}
+
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1rem, 4vw, 2.5rem);
+    margin: clamp(2rem, 7vw, 4rem) auto 0;
+    padding: clamp(0.75rem, 3vw, 1.5rem);
+    border: 3px solid lightgreen;
+    border-radius: 10px;
+}
+
+.image-column {
+    min-width: 0;
+    margin: 0;
+}
+
+.content-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.image-caption {
+    margin-top: 0.75rem;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .name {
+        flex-direction: column;
+    }
+
+    .image-row {
+        grid-template-columns: 1fr;
+    }
+}
